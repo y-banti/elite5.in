@@ -83,14 +83,16 @@ h2 {
 }
 
 .team-member:nth-child(2):hover {
+    box-shadow: 0 0 40px #000000, 0 0 60px #000000, 0 0 80px #000000; /* Neon Green */
+    border: 3px solid #000000;
+}
+
+.team-member:nth-child(3):hover {
     box-shadow: 0 0 20px #f222f5, 0 0 40px #f222f5, 0 0 60px #f222f5; /* Neon Pink */
     border: 3px solid #f222f5;
 }
 
-.team-member:nth-child(3):hover {
-    box-shadow: 0 0 40px #000000, 0 0 60px #000000, 0 0 80px #000000; /* Neon Green */
-    border: 3px solid #000000;
-}
+
 
 .team-member:nth-child(4):hover {
     box-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2, 0 0 60px #8a2be2; /* Neon Blue-Violet */
