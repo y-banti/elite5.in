@@ -1,0 +1,8 @@
+ h1 {
+    font-size: 3rem; /* Larger font size for the header */
+    letter-spacing: 2px; /* Add spacing between letters */
+    text-transform: uppercase; /* Make the text uppercase */
+    font-weight: 600; /* Make the text bold */
+    margin: 0;
+   
+}
