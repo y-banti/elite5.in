@@ -52,13 +52,12 @@ section {
 
 h2 {
     font-size: 2rem;
-    color: #eb1515;
     margin-bottom: 30px;
     color: rgb(1, 20, 20); /* Neon Cyan */
-    
 }
 
-/* Featured Member Styling */
+/* Shared Member Styling */
+.team-member,
 .featured-member {
     background: #222;
     border-radius: 10px;
@@ -69,32 +68,66 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.team-member:hover,
 .featured-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px rgb(3, 247, 247), 0 0 40px #0ff, 0 0 60px #0ff;
+    box-shadow: 0 0 20px #08f3fb, 0 0 40px #08f3fb, 0 0 60px #08f3fb; /* Neon Red */
+    border: 3px solid #08f3fb;
 }
 
+/* Neon Glow for Each Member */
+.team-member:nth-child(1):hover,
+.featured-member:nth-child(1):hover {
+    box-shadow: 0 0 20px #f80202, 0 0 40px #f80202, 0 0 60px #f80202; /* Neon Red */
+    border: 3px solid #f80202;
+}
+
+.team-member:nth-child(2):hover {
+    box-shadow: 0 0 20px #f222f5, 0 0 40px #f222f5, 0 0 60px #f222f5; /* Neon Pink */
+    border: 3px solid #f222f5;
+}
+
+.team-member:nth-child(3):hover {
+    box-shadow: 0 0 40px #000000, 0 0 60px #000000, 0 0 80px #000000; /* Neon Green */
+    border: 3px solid #000000;
+}
+
+.team-member:nth-child(4):hover {
+    box-shadow: 0 0 20px #8a2be2, 0 0 40px #8a2be2, 0 0 60px #8a2be2; /* Neon Blue-Violet */
+    border: 3px solid #8a2be2;
+}
+
+.team-member:nth-child(5):hover {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff; /* Neon Cyan */
+    border: 3px solid #0ff;
+}
+
+/* Images */
+.team-member img,
 .featured-member img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid rgb(0, 0, 0); /* Neon Cyan Border */
+    border: 3px solid rgb(0, 0, 0); /* Default Border */
     margin-bottom: 20px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
 }
 
+.team-member img:hover,
 .featured-member img:hover {
     box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
 }
 
+.team-member h3,
 .featured-member h3 {
     font-size: 1.8rem;
     color: rgb(229, 233, 233);
-    text-shadow: 0 0 3px rgb(231, 237, 237), 0 0 5px rgb(20, 18, 18), 0 0 10px ;
+    text-shadow: 0 0 3px rgb(231, 237, 237), 0 0 5px rgb(20, 18, 18), 0 0 10px;
     margin: 10px 0;
 }
 
+.team-member p,
 .featured-member p {
     color: #ccc;
     font-size: 1rem;
@@ -107,110 +140,6 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 0 20px;
-}
-
-/* Team Member Styling */
-.team-member {
-    background: #222;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-    border: 3px solid transparent; /* Default border */
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-    animation: neon-glow 1.5s ease-in-out infinite alternate;
-}
-
-/* Neon Glow Animations */
-@keyframes neon-glow {
-    0% {
-        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
-    }
-    100% {
-        box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
-    }
-}
-
-/* Different Neon Colors for Each Team Member */
-.team-member:nth-child(1):hover {
-    border: 3px solid #f80202; /* Neon Red */
-    animation: neon-gopal 1.5s ease-in-out infinite alternate;
-}
-
-.team-member:nth-child(2):hover {
-    border: 3px solid #f222f5; /* Neon Pink */
-    animation: neon-nandini 1.5s ease-in-out infinite alternate;
-}
-
-.team-member:nth-child(3):hover {
-    border: 3px solid #0a0a0a; /* Neon Green */
-    animation: neon-banti 1.5s ease-in-out infinite alternate;
-}
-
-.team-member:nth-child(4):hover {
-    border: 3px solid #8a2be2; /* Neon Blue-Violet */
-    animation: neon-dakshal 1.5s ease-in-out infinite alternate;
-}
-
-/* Neon Glow Keyframes for Each Member */
-@keyframes neon-gopal {
-    0% {
-        box-shadow: 0 0 5px #f80202, 0 0 10px #f80202, 0 0 15px #f80202;
-    }
-    100% {
-        box-shadow: 0 0 20px #f80202, 0 0 30px #f80202, 0 0 40px #f80202;
-    }
-}
-
-@keyframes neon-nandini {
-    0% {
-        box-shadow: 0 0 5px #f222f5, 0 0 10px #f222f5, 0 0 15px #f222f5;
-    }
-    100% {
-        box-shadow: 0 0 20px #f222f5, 0 0 30px #f222f5, 0 0 40px #f222f5;
-    }
-}
-
-
-
-@keyframes neon-dakshal {
-    0% {
-        box-shadow: 0 0 5px #8a2be2, 0 0 10px #8a2be2, 0 0 15px #8a2be2;
-    }
-    100% {
-        box-shadow: 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2;
-    }
-}
-@keyframes neon-banti {
-    0% {
-        box-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #000000;
-    }
-    100% {
-        box-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000;
-    }
-}
-
-.team-member img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #eee;
-}
-
-.team-member h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin: 15px 0 5px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #201f1f;
-}
-
-.team-member p {
-    color: #ccc;
-    font-size: 1rem;
-    margin: 0 0 10px;
 }
 
 /* Footer */
